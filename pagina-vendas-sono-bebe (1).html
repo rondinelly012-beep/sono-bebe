@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Como Retirar Associações de Sono do Seu Bebê</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:        #1a1a2e;
+    --warm-white: #fdf8f3;
+    --blush:      #f5e6da;
+    --terracotta: #c96a40;
+    --sage:       #4a7c6f;
+    --sage-light: #e8f1ef;
+    --gold:       #e8a838;
+    --gold-light: #fef7e6;
+    --text:       #3d3530;
+    --muted:      #8a7b72;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--warm-white);
+    color: var(--text);
+    line-height: 1.65;
+    font-size: 16px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--ink);
+    color: var(--warm-white);
+    padding: 72px 24px 64px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,106,64,.28) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 900;
+    line-height: 1.18;
+    max-width: 760px;
+    margin: 0 auto 24px;
+    letter-spacing: -.01em;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--gold);
+  }
+
+  .hero-sub {
+    font-size: clamp(.95rem, 2vw, 1.15rem);
+    color: rgba(253,248,243,.75);
+    max-width: 580px;
+    margin: 0 auto 44px;
+    line-height: 1.6;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--sage);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background .2s, transform .15s;
+    cursor: pointer;
+    border: none;
+  }
+  .btn-primary:hover { background: #3a6358; transform: translateY(-2px); }
+
+  .btn-secondary {
+    display: inline-block;
+    background: var(--terracotta);
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 22px 44px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background .2s, transform .15s;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 6px 24px rgba(201,106,64,.4);
+  }
+  .btn-secondary:hover { background: #b05a32; transform: translateY(-2px); }
+
+  .hero-badge {
+    margin-top: 18px;
+    font-size: .85rem;
+    color: rgba(253,248,243,.55);
+    letter-spacing: .03em;
+  }
+  .hero-badge span { color: var(--gold); font-weight: 600; }
+
+  /* ── MOON DIVIDER ── */
+  .moon-divider {
+    text-align: center;
+    padding: 28px 0 8px;
+    font-size: 1.4rem;
+    color: var(--muted);
+    letter-spacing: .3em;
+  }
+
+  /* ── SECTION BASE ── */
+  .section {
+    padding: 72px 24px;
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--terracotta);
+    margin-bottom: 16px;
+  }
+
+  .section h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+    font-weight: 700;
+    line-height: 1.22;
+    margin-bottom: 32px;
+    color: var(--ink);
+  }
+
+  /* ── PAIN ── */
+  .pain-section {
+    background: var(--blush);
+    border-radius: 12px;
+    padding: 56px 48px;
+    max-width: 740px;
+    margin: 0 auto 0;
+  }
+
+  @media (max-width: 600px) {
+    .pain-section { padding: 40px 24px; }
+  }
+
+  .pain-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    margin-top: 8px;
+  }
+
+  .pain-list li {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .pain-list li .icon {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin-top: 1px;
+    box-shadow: 0 1px 4px rgba(0,0,0,.08);
+  }
+
+  /* ── BRIDGE ── */
+  .bridge {
+    padding: 64px 24px 48px;
+    max-width: 740px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .bridge blockquote {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--ink);
+    margin-bottom: 24px;
+    border-left: 3px solid var(--gold);
+    padding-left: 24px;
+    text-align: left;
+  }
+
+  .bridge p {
+    font-size: 1rem;
+    color: var(--text);
+    margin-bottom: 16px;
+  }
+
+  /* ── PRODUCT ── */
+  .product-section {
+    background: var(--ink);
+    color: var(--warm-white);
+    padding: 72px 24px;
+  }
+
+  .product-inner {
+    max-width: 740px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  @media (max-width: 640px) {
+    .product-inner { grid-template-columns: 1fr; }
+  }
+
+  .product-mockup {
+    background: linear-gradient(135deg, #2d2d4a 0%, #1a1a2e 100%);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 10px;
+    padding: 36px 28px;
+    text-align: center;
+    position: relative;
+  }
+
+  .product-mockup::before {
+    content: '🌙';
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  .product-mockup-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--warm-white);
+    line-height: 1.35;
+    margin-bottom: 8px;
+  }
+
+  .product-mockup-sub {
+    font-size: .78rem;
+    color: rgba(253,248,243,.5);
+    letter-spacing: .05em;
+    text-transform: uppercase;
+  }
+
+  .product-tag {
+    position: absolute;
+    top: -12px;
+    right: 16px;
+    background: var(--gold);
+    color: var(--ink);
+    font-size: .7rem;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 20px;
+  }
+
+  .product-info .section-label { color: var(--gold); }
+  .product-info h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 700;
+    color: var(--warm-white);
+    margin-bottom: 20px;
+    line-height: 1.25;
+  }
+
+  .product-info p {
+    color: rgba(253,248,243,.75);
+    font-size: .97rem;
+    margin-bottom: 28px;
+  }
+
+  .benefits-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .benefits-list li {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+    font-size: .97rem;
+    color: rgba(253,248,243,.88);
+  }
+
+  .benefits-list li .check {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    background: var(--sage);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    margin-top: 2px;
+  }
+
+  /* ── OFFER ── */
+  .offer-section {
+    padding: 72px 24px;
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .price-box {
+    background: var(--gold-light);
+    border: 2px solid var(--gold);
+    border-radius: 12px;
+    padding: 40px 32px;
+    margin-bottom: 32px;
+  }
+
+  .price-old {
+    font-size: 1rem;
+    color: var(--muted);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+
+  .price-new {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.4rem, 6vw, 3.6rem);
+    font-weight: 900;
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .price-detail {
+    font-size: .85rem;
+    color: var(--muted);
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
+
+  .guarantee {
+    background: var(--sage-light);
+    border-left: 4px solid var(--sage);
+    border-radius: 0 8px 8px 0;
+    padding: 20px 24px;
+    text-align: left;
+    font-size: .93rem;
+    color: var(--text);
+    margin-top: 28px;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  .guarantee-icon { font-size: 1.6rem; flex-shrink: 0; }
+
+  .guarantee strong { display: block; color: var(--sage); margin-bottom: 4px; font-size: .95rem; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--ink);
+    color: rgba(253,248,243,.4);
+    text-align: center;
+    padding: 32px 24px;
+    font-size: .8rem;
+    line-height: 1.7;
+  }
+
+  /* ── SEPARATOR ── */
+  .sep {
+    border: none;
+    height: 1px;
+    background: rgba(0,0,0,.08);
+    max-width: 740px;
+    margin: 0 auto;
+  }
+
+  /* ── STARS ── */
+  .stars { color: var(--gold); letter-spacing: 2px; }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<section class="hero">
+  <p class="hero-eyebrow">E-book digital • Resultado em dias</p>
+
+  <h1>Como remover as associações de sono do seu bebê e fazê-lo <em>dormir a noite inteira</em> — sem técnicas cruéis de choro</h1>
+
+  <p class="hero-sub">Um guia prático e direto para mães exaustas que precisam recuperar o descanso e a energia, por um valor menor que um lanche.</p>
+
+  <a href="#oferta" class="btn-primary">✦ Quero que meu bebê durma bem</a>
+
+  <p class="hero-badge">Acesso imediato &nbsp;·&nbsp; <span>Apenas R$ 19,90</span></p>
+</section>
+
+<div class="moon-divider">· · ·</div>
+
+<!-- ═══════════════════════════════ DOR ═══════════════════════════════ -->
+<div style="padding: 56px 24px 0; max-width: 740px; margin: 0 auto;">
+  <div class="pain-section">
+    <p class="section-label">Você se reconhece?</p>
+    <h2>Parece que estou descrevendo a sua noite?</h2>
+
+    <ul class="pain-list">
+      <li>
+        <span class="icon">❌</span>
+        <span>Seu bebê só pega no sono se for <strong>balançado no colo</strong> ou mamando — e qualquer tentativa de soltá-lo acorda tudo de novo.</span>
+      </li>
+      <li>
+        <span class="icon">❌</span>
+        <span>Ele acorda <strong>de hora em hora</strong>, como se o sono nunca fosse realmente profundo.</span>
+      </li>
+      <li>
+        <span class="icon">❌</span>
+        <span>Você sente que está <strong>operando no limite</strong> da exaustão física e mental — e ainda assim precisa ser mãe amanhã cedo.</span>
+      </li>
+      <li>
+        <span class="icon">❌</span>
+        <span>Já tentou de tudo, mas nada funciona — e você tem <strong>medo de deixá-lo chorando</strong> sem saber se está fazendo a coisa certa.</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ PONTE ═══════════════════════════════ -->
+<div class="bridge">
+  <blockquote>
+    "Você não está fazendo nada errado. O seu bebê apenas aprendeu a dormir dependendo de um estímulo externo."
+  </blockquote>
+
+  <p>Quando ele desperta naturalmente no meio da noite — como todos nós fazemos — ele não sabe como voltar a dormir sem esse mesmo estímulo. É um ciclo. E ciclos podem ser quebrados.</p>
+
+  <p style="color: var(--muted); font-size: .93rem;">Sem culpa. Sem abandono. Sem choro sem resposta.</p>
+</div>
+
+<hr class="sep">
+
+<!-- ═══════════════════════════════ PRODUTO ═══════════════════════════════ -->
+<section class="product-section">
+  <div class="product-inner">
+
+    <div class="product-mockup">
+      <span class="product-tag">E-book</span>
+      <p class="product-mockup-title">Como Retirar Associações de Sono do Seu Bebê</p>
+      <p class="product-mockup-sub">Guia completo passo a passo</p>
+    </div>
+
+    <div class="product-info">
+      <p class="section-label">O que você vai encontrar</p>
+      <h2>Tudo que você precisa para virar essa noite</h2>
+      <p>Para te ajudar a quebrar esse ciclo sem sofrimento, criei este guia direto ao ponto — sem teoria excessiva, sem julgamento.</p>
+
+      <ul class="benefits-list">
+        <li>
+          <span class="check">✓</span>
+          <span>O <strong>passo a passo</strong> para identificar todas as associações de sono atuais do seu bebê.</span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span>A <strong>transição gradual</strong> que ensina o bebê a dormir de forma autônoma — sem trauma.</span>
+        </li>
+        <li>
+          <span class="check">✓</span>
+          <span>Como criar uma <strong>rotina de sono que realmente encaixa</strong> na sua realidade — sem fórmulas genéricas.</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ OFERTA ═══════════════════════════════ -->
+<section class="offer-section" id="oferta">
+  <p class="section-label" style="text-align:center;">Oferta especial</p>
+  <h2 style="font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.5rem,3.5vw,2.2rem); color:var(--ink); margin-bottom:32px; line-height:1.25;">
+    Recupere o seu sono<br>— e o do seu bebê
+  </h2>
+
+  <div class="price-box">
+    <p class="price-old">De R$ 49,90</p>
+    <p class="price-new">R$ 19,90</p>
+    <p class="price-detail">pagamento único · acesso imediato</p>
+  </div>
+
+  <a href="#" class="btn-secondary">✦ Sim! Quero comprar agora por R$ 19,90</a>
+
+  <div class="guarantee">
+    <span class="guarantee-icon">🛡️</span>
+    <div>
+      <strong>Risco Zero — 7 dias de garantia</strong>
+      Se em até 7 dias você achar que as dicas não servem para o seu caso, devolvo <strong>100% do seu dinheiro</strong> direto na plataforma. Sem perguntas.
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer>
+  <p>© 2026 · Todos os direitos reservados</p>
+  <p style="margin-top:6px;">Este produto é um e-book digital entregue imediatamente após a confirmação do pagamento.</p>
+</footer>
+
+</body>
+</html>
